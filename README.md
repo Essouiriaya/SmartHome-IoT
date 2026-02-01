@@ -13,12 +13,12 @@ Proud to share our **end-to-end Smart Home IoT project**, designed to simulate, 
 ## 🏗️ Architecture Overview
 **Python Sensor Emulation ➝ MQTT ➝ Cloud Backend ➝ Angular Dashboard**
 
-- ✅ Python-based sensor simulation (Temperature, Humidity, Luminosity, Presence)  
-- ✅ Real-time data transport using MQTT (Mosquitto Broker)  
-- ✅ Flask backend as an MQTT Subscriber & REST API provider  
-- ✅ Cloud deployment on Clever Cloud  
-- ✅ Angular Dashboard for real-time visualization & actuator control  
-- ✅ Bidirectional communication (Sensors ↔ Dashboard ↔ Actuators)
+-  Python-based sensor simulation (Temperature, Humidity, Luminosity, Presence)  
+-  Real-time data transport using MQTT (Mosquitto Broker)  
+-  Flask backend as an MQTT Subscriber & REST API provider  
+-  Cloud deployment on Clever Cloud  
+-  Angular Dashboard for real-time visualization & actuator control  
+-  Bidirectional communication (Sensors ↔ Dashboard ↔ Actuators)
 
 
 
