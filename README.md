@@ -21,7 +21,7 @@ Proud to share our **end-to-end Smart Home IoT project**, designed to simulate, 
 - ✅ Angular Dashboard for real-time visualization & actuator control  
 - ✅ Bidirectional communication (Sensors ↔ Dashboard ↔ Actuators)
 
----
+
 
 ## ☁️ Cloud & IoT Services Used
 - 🔹 **Clever Cloud (PaaS)** – Backend & database hosting  
@@ -30,7 +30,7 @@ Proud to share our **end-to-end Smart Home IoT project**, designed to simulate, 
 - 🔹 **MySQL Database** – Persistent time-series storage  
 - 🔹 **Angular Dashboard** – Live monitoring & control interface  
 
----
+
 
 ## 🔄 Smart Home Data Pipeline
 1️⃣ **Sensor Emulation (Edge)**: Python scripts simulate home sensors and publish data every few seconds  
@@ -39,12 +39,12 @@ Proud to share our **end-to-end Smart Home IoT project**, designed to simulate, 
 4️⃣ **Visualization & Control**: Angular dashboard displays real-time values, historical charts, alerts, and controls  
 5️⃣ **Bidirectional Control**: User commands (LED, Fan, Buzzer) sent back via MQTT to simulated actuators  
 
----
+
 
 ## 💻 Full Tech Stack
 **Python • Flask • MQTT • Mosquitto • Clever Cloud • MySQL • Angular • SocketIO**
 
----
+
 
 ## ✅ Key Takeaways
 - Smart Home systems can be fully simulated without physical devices  
