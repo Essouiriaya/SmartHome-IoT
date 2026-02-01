@@ -9,7 +9,7 @@
 
 Proud to share our **end-to-end Smart Home IoT project**, designed to simulate, transport, store, and visualize **real-time sensor data**, while enabling **bidirectional control** of home actuators — all deployed in the cloud 🚀
 
----
+
 
 ## 🏗️ Architecture Overview
 **Python Sensor Emulation ➝ MQTT ➝ Cloud Backend ➝ Angular Dashboard**
