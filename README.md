@@ -23,11 +23,11 @@ Proud to share our **end-to-end Smart Home IoT project**, designed to simulate, 
 
 
 ## ☁️ Cloud & IoT Services Used
-- 🔹 **Clever Cloud (PaaS)** – Backend & database hosting  
-- 🔹 **Mosquitto MQTT Broker** – Lightweight real-time messaging  
-- 🔹 **Flask Backend** – MQTT ingestion, REST API & SocketIO  
-- 🔹 **MySQL Database** – Persistent time-series storage  
-- 🔹 **Angular Dashboard** – Live monitoring & control interface  
+-  **Clever Cloud (PaaS)** – Backend & database hosting  
+-  **Mosquitto MQTT Broker** – Lightweight real-time messaging  
+-  **Flask Backend** – MQTT ingestion, REST API & SocketIO  
+-  **MySQL Database** – Persistent time-series storage  
+-  **Angular Dashboard** – Live monitoring & control interface  
 
 
 
