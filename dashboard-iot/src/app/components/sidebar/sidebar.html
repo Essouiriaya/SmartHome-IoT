@@ -1,0 +1,36 @@
+<div class="sidebar">
+  <!-- Menu de navigation -->
+  <ul class="nav-menu">
+    <li>
+      <a routerLink="/" 
+         routerLinkActive="active" 
+         [routerLinkActiveOptions]="{ exact: true }"
+         title="Tableau de Bord"
+         class="slide-in-left">
+        <i class="bi bi-speedometer2"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/history" 
+         routerLinkActive="active" 
+         [routerLinkActiveOptions]="{ exact: true }"
+         title="Historique"
+         class="slide-in-left">
+        <i class="bi bi-clock-history"></i>
+        <span>History</span>
+      </a>
+    </li>
+
+    <li>
+      <a routerLink="/actuators" 
+         routerLinkActive="active" 
+         [routerLinkActiveOptions]="{ exact: true }"
+         title="Actuators"
+         class="slide-in-left">
+        <i class="bi bi-lightning"></i>
+        <span>Actuators</span>
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,15 @@
+<nav class="header">
+  <div class="header-content">
+    <div class="info-section">
+      <!-- Horloge -->
+      <div class="clock fade-in">
+        {{ currentTime }}
+      </div>
+    </div>
+
+    <!-- Bouton thème -->
+    <button class="theme-toggle" (click)="toggleTheme()" aria-label="Changer le thème">
+      <i [class]="themeService.isDarkMode() ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill'"></i>
+    </button>
+  </div>
+</nav> 

@@ -1,0 +1,8 @@
+.charts-box {
+  background: var(--header-bg);
+  color: var(--text-color);
+  transition: 0.2s ease-in-out;
+}
+.charts-box:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}

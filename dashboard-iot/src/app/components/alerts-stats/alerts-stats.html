@@ -1,0 +1,65 @@
+<div class="row g-4 mx-1 mt-1">
+  <!-- Global Statistics -->
+  <div class="col-lg-6 col-md-12">
+    <div class="card shadow-lg stats-card equal-card h-100"> 
+      <div class="card-header text-white d-flex align-items-center" style="background-color: #1982c4;">
+        <i class="bi bi-graph-up-arrow me-2"></i>
+        <h5 class="mb-0">Global Statistics</h5>
+      </div>
+
+      <div class="card-body">
+        <div class="row text-center g-3">
+ 
+          <div class="col-6 mini-card">
+            <div class="stat-box p-3 border rounded">
+              <h6>Total Measurements</h6>
+              <h3 class="fw-bold">{{ totalMeasurements }}</h3>
+            </div>
+          </div>
+
+          <div class="col-6 mini-card">
+            <div class="stat-box p-3 border rounded">
+              <h6>Average Temperature</h6>
+              <h3 class="fw-bold">{{ averageTemperature }}°C</h3>
+            </div>
+          </div>
+
+          <div class="col-6 mini-card">
+            <div class="stat-box p-3 border rounded">
+              <h6>Average Humidity</h6>
+              <h3 class="fw-bold">{{ averageHumidity }}%</h3>
+            </div>
+          </div>
+
+          <div class="col-6 mini-card">
+            <div class="stat-box p-3 border rounded">
+              <h6>Last Measurement</h6>
+              <h3 class="fw-bold">{{ lastUpdate ? (lastUpdate | date:'shortTime') : 'N/A' }}</h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-12">
+    <div class="card shadow-lg alert-card equal-card h-100">
+      <div class="card-header text-white d-flex align-items-center" style="background-color: #ff595e;">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+        <h5 class="mb-0">Critical Alerts</h5>
+      </div>
+
+      <div class="card-body d-flex flex-column justify-content-center h-100">
+        <ul class="list-group list-group-flush border rounded">
+          <li *ngFor="let alert of alerts" class="list-group-item d-flex align-items-center alerts-box">
+            <i class="bi bi-exclamation-circle text-danger me-3 fs-4"></i>
+            <span>{{ alert }}</span>
+          </li>
+          <li *ngIf="alerts.length === 0" class="list-group-item text-center alerts-box">
+            No critical alerts
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

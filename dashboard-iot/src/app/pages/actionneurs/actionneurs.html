@@ -1,0 +1,63 @@
+<main class="main-content">
+  <div class="container mt-4">
+    <h2 class="mb-4 text-center">Actuators Control</h2>
+
+    <div class="row g-4">
+
+      <!-- LED Card -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center stats-card">
+          <div class="card-body">
+            <h5 class="card-title">LED</h5>
+            <p>Status : 
+              <span [ngStyle]="{'color': ledStatus ? '#1982c4' : '#ff595e'}">
+                {{ ledStatus ? 'ON' : 'OFF' }}
+              </span>
+            </p>
+            <button (click)="turnOnLED()" class="btn btn-success me-2">Turn On</button>
+            <button (click)="turnOffLED()" class="btn btn-danger">Turn Off</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fan Card -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center stats-card">
+          <div class="card-body">
+            <h5 class="card-title">Fan</h5>
+            <p>Status : 
+              <span [ngStyle]="{'color': fanStatus ? '#1982c4' : '#ff595e'}">
+                {{ fanStatus ? 'ON' : 'OFF' }}
+              </span>
+            </p>
+            <button (click)="turnOnFan()" class="btn btn-success me-2">Turn On</button>
+            <button (click)="turnOffFan()" class="btn btn-danger">Turn Off</button>
+
+            <div class="mt-3">
+              <label for="fanSpeed" class="form-label">Speed :</label>
+              <input id="fanSpeed" type="range" class="form-range" min="0" max="5" [value]="fanSpeed" (change)="setFanSpeed($event)" />
+              <div>Value : {{ fanSpeed }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buzzer Card -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center stats-card">
+          <div class="card-body">
+            <h5 class="card-title">Buzzer</h5>
+            <p>Status : 
+              <span [ngStyle]="{'color': buzzerStatus ? '#1982c4' : '#ff595e'}">
+                {{ buzzerStatus ? 'ON' : 'OFF' }}
+              </span>
+            </p>
+            <button (click)="turnOnBuzzer()" class="btn btn-success me-2">Turn On</button>
+            <button (click)="turnOffBuzzer()" class="btn btn-danger">Turn Off</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>

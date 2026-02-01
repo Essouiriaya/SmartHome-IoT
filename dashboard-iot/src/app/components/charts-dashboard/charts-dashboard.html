@@ -1,0 +1,45 @@
+<div class="row g-4 mx-1 mt-1">
+  <div class="col-md-6">
+    <div class="card p-3 charts-box">
+      <h5>Temperature (24h)</h5>
+      <canvas baseChart 
+              [data]="tempChartData" 
+              [options]="tempChartOptions" 
+              [type]="'line'">
+      </canvas>
+    </div> 
+  </div>
+
+  <div class="col-md-6">
+    <div class="card p-3 charts-box">
+      <h5>Humidity (24h)</h5>
+      <canvas baseChart 
+              [data]="humChartData" 
+              [options]="humChartOptions" 
+              [type]="'line'">
+      </canvas>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card p-3 charts-box">
+      <h5>Luminosity (24h)</h5>
+      <canvas baseChart 
+              [data]="luxChartData" 
+              [options]="luxChartOptions" 
+              [type]="'line'">
+      </canvas>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card p-3 charts-box">
+      <h5>Presence (24h)</h5>
+      <canvas baseChart 
+              [data]="presenceChartData" 
+              [options]="presenceChartOptions" 
+              [type]="'bar'">
+      </canvas>
+    </div>
+  </div>
+</div>

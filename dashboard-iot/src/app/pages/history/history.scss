@@ -1,0 +1,47 @@
+.history-container {
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+.page-title {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.table-header {
+  background: var(--header-bg);
+  color: var(--text-color);
+  transition: 0.2s ease-in-out;
+}
+
+.fade-row {
+  animation: fadeInUp 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mini-card{
+  background: var(--header-bg);
+  color: var(--text-color);
+  transition: 0.2s ease-in-out;
+}
+
+.btn-warning{
+  background-color: #1982c4 !important;
+  border-color: #1982c4 !important;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.btn-warning:hover {
+  background-color: #1560a3 !important;
+  border-color: #1560a3 !important;
+}

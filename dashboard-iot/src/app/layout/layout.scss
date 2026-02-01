@@ -1,0 +1,20 @@
+.layout {
+  display: flex;
+}
+
+main {
+  margin-left: 240px;
+  padding: 20px;
+  width: 100%;
+  background: var(--main-bg);
+  color: var(--text-color);
+  min-height: 100vh;
+  transition: 0.3s;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  main {
+    margin-left: 70px;
+  }
+}

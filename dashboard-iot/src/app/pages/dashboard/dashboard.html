@@ -1,0 +1,58 @@
+<main class="main-content">
+  <div class="text-center my-3">
+    <h2 class="fw-bold" style="font-family: 'Poppins', sans-serif; font-weight: 600;">
+      Empower Your Smart Home Experience with Full Control, Anytime, Anywhere.
+    </h2>
+  </div>
+
+  <div class="cards-grid">
+    <app-stats-card
+      icon="bi bi-thermometer-half"
+      title="Temperature"
+      [value]="data?.temperature"
+      unit="°C"
+      color="#ff595e"
+      [alert]="data?.temperature > 35">
+    </app-stats-card>
+
+    <app-stats-card
+      icon="bi bi-moisture"
+      title="Humidity"
+      [value]="data?.humidite"
+      unit="%"
+      color="#1982c4">
+    </app-stats-card>
+
+    <app-stats-card
+      icon="bi bi-brightness-high"
+      title="Brightness"
+      [value]="data?.luminosite"
+      unit="LUX"
+      color="#ffca3a"
+      [alert]="data?.luminosite < 100">
+    </app-stats-card>
+
+    <app-stats-card
+      icon="bi bi-person-walking"
+      title="Presence"
+      [value]="data?.presence ? 'Detected' : 'None'"
+      unit=""
+      color="#8ac926"
+      [alert]="data?.presence === true">
+    </app-stats-card>
+  </div>
+  <div>
+    <app-alerts-stats
+      [alerts]="alerts"
+      [totalMeasurements]="totalMeasurements"
+      [averageTemperature]="averageTemperature"
+      [averageHumidity]="averageHumidity"
+      [lastUpdate]="lastUpdate">
+    </app-alerts-stats>
+  </div>
+  <div>
+    <app-charts-dashboard>
+      
+    </app-charts-dashboard>
+  </div>
+</main>

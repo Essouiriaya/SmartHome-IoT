@@ -1,0 +1,26 @@
+.card{
+  background: var(--header-bg);
+}
+.mini-card{
+  background: var(--header-bg);
+  color: var(--text-color);
+  transition: 0.2s ease-in-out;
+}
+.equal-card {
+  height: 100%;
+}
+
+.stat-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.alerts-box {
+  background: var(--header-bg);
+  color: var(--text-color);
+  transition: 0.2s ease-in-out;
+}
+.alerts-box:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+

@@ -1,0 +1,427 @@
+:root {
+  /* Palette Smart Home Professionnelle */
+  --primary-color: #0dcaf0;       /* Bleu IoT moderne */
+  --secondary-color: #20c997;     /* Vert connecté */
+  --accent-color: #ffc107;        /* Jaune énergétique */
+  --success-color: #198754;       /* Vert confirmation */
+  --warning-color: #fd7e14;       /* Orange attention */
+  --danger-color: #dc3545;        /* Rouge alerte */
+  
+  /* Couleurs light mode - Design professionnel */
+  --sidebar-bg: #ffffff;          /* Blanc pur */
+  --header-bg: #f8f9fa;           /* Gris très léger */
+  --main-bg: #f5f7fb;             /* Gris bleuté doux */
+  --text-color: #000000;          /* Gris foncé professionnel */
+  --text-inverse: #ffffff;        /* Texte clair */
+  --hover-bg: #e3f2fd;            /* Bleu très léger */ 
+  --active-bg: #0dcaf0;           /* Bleu primaire */
+  --border-color: #e2e8f0;        /* Gris clair */
+  --card-bg: #ffffff;             /* Blanc */
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+}
+
+body.dark-mode {
+  --sidebar-bg: #1a202c;          /* Gris très sombre */
+  --header-bg: #2d3748;           /* Gris foncé */
+  --main-bg: #171923;             /* Noir bleuté */
+  --text-color: #e2e8f0;          /* Gris très clair */
+  --text-inverse: #1a202c;        /* Texte sombre */
+  --hover-bg: #2d3748;            /* Gris foncé */
+  --active-bg: #0dcaf0;           /* Bleu primaire */
+  --border-color: #4a5568;        /* Gris moyen */
+  --card-bg: #2d3748;             /* Gris foncé */
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--main-bg);
+  color: var(--text-color);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  line-height: 1.6;
+}
+
+// Layout principal
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+// Header professionnel
+.header {
+  height: 75px;
+  width: 100%;
+  background: var(--header-bg);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 900;
+  box-shadow: var(--shadow);
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 2rem;
+    position: relative;
+  }
+
+  .info-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+
+    .update-info {
+      small {
+        color: var(--text-color);
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      strong {
+        color: var(--text-color);
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+    }
+
+    .clock {
+      padding: 0.75rem 1.5rem;
+      color: var(--text-color);
+      font-weight: 500;
+      font-size: 1.2rem;
+      min-width: 120px;
+      text-align: center;
+    }
+  }
+
+  .theme-toggle {
+    position: absolute;
+    right: 0;
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow);
+
+    &:hover {
+      background: var(--primary-color);
+      color: var(--text-inverse);
+      border-color: var(--primary-color);
+      transform: scale(1.1);
+    }
+
+    i {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// Sidebar professionnel
+.sidebar {
+  width: 85px;
+  height: 100vh;
+  border-radius: 0 30px 30px 0;
+  background: var(--sidebar-bg);
+  color: var(--text-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-lg);
+  border-right: 1px solid var(--border-color); 
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  
+  // Navigation professionnelle
+  .nav-menu {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 1.5rem;
+
+    li {
+      width: 100%;
+      margin-bottom: 0.5rem;
+      padding: 0 0.75rem;
+      
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
+        color: var(--text-color);
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        border-radius: 12px;
+        background: transparent;
+        
+        i {
+          font-size: 1.5rem;
+          transition: all 0.3s ease;
+          color: var(--text-color);
+          opacity: 0.8;
+        }
+
+        span {
+          display: none;
+          font-weight: 600;
+          font-size: 0.9rem;
+          margin-left: 0;
+          opacity: 0;
+          transition: all 0.3s ease;
+        }
+
+        // Tooltip professionnel
+        &::after {
+          content: attr(title);
+          position: absolute;
+          left: calc(100% + 15px);
+          top: 50%;
+          transform: translateY(-50%);
+          background: var(--text-color);
+          color: var(--text-inverse);
+          padding: 0.5rem 1rem;
+          border-radius: 8px;
+          font-size: 0.8rem;
+          font-weight: 600;
+          white-space: nowrap;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+          z-index: 1000;
+          box-shadow: var(--shadow);
+        }
+
+        &:hover {
+          background: var(--hover-bg);
+          transform: translateX(5px);
+          
+          &::after {
+            opacity: 1;
+            visibility: visible;
+            left: calc(100% + 20px);
+          }
+          
+          i {
+            color: var(--primary-color);
+            opacity: 1;
+            transform: scale(1.1);
+          }
+        }
+
+        &.active {
+          background: var(--active-bg);
+          box-shadow: var(--shadow);
+          
+          i {
+            color: white;
+            opacity: 1;
+          }
+          
+          span {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  // Animation au hover - Sidebar étendu
+  &:hover {
+    width: 220px;
+    
+    .nav-menu {
+      li a {
+        justify-content: flex-start;
+        padding: 1rem 1.5rem;
+        
+        &::after {
+          display: none;
+        }
+        
+        span {
+          display: inline;
+          margin-left: 1rem;
+          opacity: 1;
+        }
+      }
+    }
+    
+    // Quand la sidebar est étendue, on ajoute une classe au body
+    & ~ .main-content {
+      margin-left: 240px;
+    }
+  }
+}
+
+// Contenu principal professionnel - CORRIGÉ
+.main-content {
+  margin-left: 85px;
+  padding: 90px 2rem 2rem 2rem;
+  min-height: 100vh;
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 1400px;
+  position: relative;
+  z-index: 800;
+  flex: 1;
+}
+
+// Solution avec JavaScript - Classes globales
+body.sidebar-expanded .main-content {
+  margin-left: 240px;
+}
+
+body.sidebar-collapsed .main-content {
+  margin-left: 85px;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .header {
+    height: 65px;
+    padding: 0 1rem;
+    
+    .info-section {
+      gap: 1rem;
+      
+      .update-info strong {
+        font-size: 0.8rem;
+      }
+      
+      .clock {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+        min-width: 100px;
+      }
+    }
+    
+    .theme-toggle {
+      padding: 0.6rem;
+    }
+  }
+
+  .sidebar {
+    width: 70px;
+    
+    &:hover {
+      width: 70px;
+      
+      .nav-menu li a {
+        justify-content: center;
+        padding: 1rem 0;
+        
+        span {
+          display: none;
+          opacity: 0;
+        }
+      }
+      
+      & ~ .main-content {
+        margin-left: 70px;
+      }
+    }
+  }
+
+  .main-content {
+    margin-left: 70px;
+    padding: 75px 1rem 1rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .info-section .update-info {
+    display: none;
+  }
+}
+
+// Animations
+.fade-in {
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Accessibilité
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--main-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
