@@ -1,18 +1,13 @@
-<p align="center">
-  <h1>🚀 Smart Home IoT Dashboard 🏠📊</h1>
+# 🚀 Smart Home IoT Dashboard 🏠📊
 
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask"/>
-  <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular"/>
-  <img src="https://img.shields.io/badge/MQTT-FF6F00?style=for-the-badge&logo=mosquitto&logoColor=white" alt="MQTT"/>
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
-  <img src="https://img.shields.io/badge/Clever_Cloud-00AEEF?style=for-the-badge&logo=clever-cloud&logoColor=white" alt="Clever Cloud"/>
-</p>
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![MQTT](https://img.shields.io/badge/MQTT-FF6F00?style=for-the-badge&logo=mosquitto&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Clever Cloud](https://img.shields.io/badge/Clever_Cloud-00AEEF?style=for-the-badge&logo=clever-cloud&logoColor=white)
 
-<p align="center">
-  Proud to share our <b>end-to-end Smart Home IoT project</b>, designed to simulate, transport, store, and visualize <b>real-time sensor data</b>, while enabling <b>bidirectional control</b> of home actuators — all deployed in the cloud 🚀
-</p>
-
+Proud to share our **end-to-end Smart Home IoT project**, designed to simulate, transport, store, and visualize **real-time sensor data**, while enabling **bidirectional control** of home actuators — all deployed in the cloud 🚀
 
 
 ## 🏗️ Architecture Overview
