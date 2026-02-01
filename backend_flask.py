@@ -8,6 +8,7 @@ from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
 from flask_socketio import SocketIO, emit
 from flask_cors import CORS
+import os
 
 # ---------------- CONFIGURATION ----------------
 BROKER = "localhost"
@@ -22,7 +23,7 @@ CORS(app, resources={
         "allow_headers": ["Content-Type", "Authorization"]
     }
 })
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://uukd0ke5u7gox0np:sI4wwdtxmX7M9bYlVQcd@bbudwe6ihqho0hwa1vyp-mysql.services.clever-cloud.com:3306/bbudwe6ihqho0hwa1vyp'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("MYSQL_ADDON_URI")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
